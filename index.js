@@ -6,6 +6,6 @@ app.listen(port, ()=>{
   console.log(`Server rodando na prta ${port}`)
 })
 
-app.get('/', (req,res)=>{
+app.get('/.well-know/assetlinks.json', (req,res)=>{
   res.send(require("./assetlinks.json"))
 })
