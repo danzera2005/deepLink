@@ -1,12 +1,11 @@
-const http = require('http');
-const PORT = 3000;
+const express = require("express")
+const app = express()
+const port = 3000
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end(require("./assetlinks.json"))
-});
+app.listen(port, ()=>{
+  console.log(`Server rodando na prta ${port}`)
+})
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+app.get('/', (req,res)=>{
+  res.send(require("./assetlinks.json"))
+})
