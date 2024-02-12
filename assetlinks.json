@@ -2,9 +2,9 @@
     {
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target": {
-            "namespace": "android_app",
-            "package_name": "com.makan.deep_linking_flutter",
-            "sha256_cert_fingerprints": [" D6:F2:FA:0E:4E:99:01:B8:ED:D5:B7:4C:41:A4:B0:5F:54:74:D0:A9:6A:5E:44:57:0F:2E:92:6F:85:FD:94:FD"]
+            "namespace": "AppB.O.M",
+            "package_name": "br.com.appbom",
+            "sha256_cert_fingerprints": ["D6:F2:FA:0E:4E:99:01:B8:ED:D5:B7:4C:41:A4:B0:5F:54:74:D0:A9:6A:5E:44:57:0F:2E:92:6F:85:FD:94:FD"]
         }
     }
 ]
