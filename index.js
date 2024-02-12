@@ -8,7 +8,7 @@ const assetlinksPath = path.join(__dirname, 'assetlinks.json');
 
 // Rota para servir o arquivo assetlinks.json
 app.get('/.well-known/assetlinks.json', (req, res) => {
-    res.sendFile(assetlinksPath);
+    res.sendFile(assetlinksPath); 
 });
 
 // Inicia o servidor na porta 3000
