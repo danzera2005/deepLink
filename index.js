@@ -1,11 +1,17 @@
-const express = require("express")
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const path = require('path');
+const PORT = 3000;
 
-app.listen(port, ()=>{
-  console.log(`Server rodando na prta ${port}`)
-})
+// Define o diretório onde o arquivo assetlinks.json está localizado
+const assetlinksPath = path.join(__dirname, 'assetlinks.json');
 
-app.get('/.well-know/assetlinks.json', (req,res)=>{
-  res.send(require("./assetlinks.json"))
-})
+// Rota para servir o arquivo assetlinks.json
+app.get('/.well-known/assetlinks.json', (req, res) => {
+    res.sendFile(assetlinksPath);
+});
+
+// Inicia o servidor na porta 3000
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
